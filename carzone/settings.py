@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cars',
     'ckeditor',
     'multiselectfield',
+    'django.contrib.humanize',
    
 ]
 

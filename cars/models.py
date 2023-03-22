@@ -6,7 +6,7 @@ from multiselectfield import MultiSelectField
 
 # Create your models here.
 
-class car(models.Model):
+class Car(models.Model):
     state_choice = (
         ('AL', 'Alabama'),
         ('AK', 'Alaska'),
