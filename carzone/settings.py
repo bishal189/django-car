@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+from django.contrib.messages import constants as messages
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -42,9 +44,24 @@ INSTALLED_APPS = [
     'ckeditor',
     'multiselectfield',
     'django.contrib.humanize',
-    'account',
-   
+    'accounts',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',  
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+
+
 ]
+LOGIN_REDIRECT_URL='dashboard'
+
+
+#   this is for socail media configuration
+AUTHENTICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,9 +101,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'carzone',
-        'USER':'bishal',
-        'PASSWORD':'bishal',
-        'HOST':'localhost',
+        'USER': 'bishal',
+        'PASSWORD': 'bishal',
+        'HOST': 'localhost',
 
     }
 }
@@ -128,23 +145,24 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT=BASE_DIR / 'static'
-STATICFILES_DIRS=[
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
     'carzone/static'
 ]
 
 # media file configuration
 
-MEDIA_URL= 'media/'
-MEDIA_ROOT=BASE_DIR / 'media'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
-#for messages
-from django.contrib.messages import constants as messages
+# for messages
 MESSAGE_TAGS = {
-    messages.ERROR:'danger',
-    
+    messages.ERROR: 'danger',
+
 }
 
+
+SITE_ID = 1
 
 
 # Default primary key field type
