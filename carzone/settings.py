@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    'contact',
 
 
 ]
@@ -169,3 +170,14 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# for email verification
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='bishumurmu098@gmail.com'
+
+EMAIL_HOST_PASSWORD='bishalmurmu098'
+EMAIL_USE_TLS=True
