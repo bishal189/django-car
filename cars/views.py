@@ -52,6 +52,10 @@ def search(request):
         keyword=request.GET['model']
         if keyword:
             cars=cars.filter(model__icontains=keyword)
+    if 'keyword' in request.GET:
+        keyword=request.GET['keyword']
+        if keyword:
+            cars=cars.filter(description__icontains=keyword)
     if 'location' in request.GET:
         keyword=request.GET['location']
         if keyword:
