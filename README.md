@@ -23,7 +23,6 @@ Instructions
 
     -5 + 8 + 7.6 = 10
 
--5 + 8 + 7.6 = 10
 
 Part 2: Check Substring in Text
 
@@ -48,18 +47,9 @@ Running the Code
 
     Replace script_name.py with the name of your Python file.
 
-Example Output
+Expexted  Output
 
-When running the script, you should see the following output:
+    When running the script, you should see the following output:
+     -5 + 8 + 7.6 = 10
+    Value of 'TOTAL' exists in string: true that
 
-arduino
-
--5 + 8 + 7.6 = 10
-Value of 'TOTAL' exists in string: true that
-
-Author
-
-Created by bishalmurmu.
-License
-
-This project is open-source and available under the MIT License.
