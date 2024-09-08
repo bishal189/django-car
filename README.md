@@ -21,7 +21,7 @@ Instructions
 
     Expected Output:
 
-    diff
+    -5 + 8 + 7.6 = 10
 
 -5 + 8 + 7.6 = 10
 
@@ -33,7 +33,7 @@ Part 2: Check Substring in Text
 
 Expected Output:
 
-arduino
+
 
     Value of 'TOTAL' exists in string: true that
 
